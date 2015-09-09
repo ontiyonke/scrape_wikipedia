@@ -31,15 +31,15 @@ We assume you have the following installed:
 First make sure to create and activate a virtualenv_, then open a terminal at the project root and install the
 requirements for local development:
 
-** $ pip install -e <path-to-setup.py>
+* $ pip install -e <path-to-setup.py>
 
 Run **develop** on your new database:
 
-** $ python setup.py develop
+* $ python setup.py develop
 
 You can now run the **pserve** command:
 
-** $ pserve development.ini
+* $ pserve development.ini
 
 Open up your browser to http://127.0.0.1:6543/ to see the site running locally.
 
@@ -47,4 +47,6 @@ Open up your browser to http://127.0.0.1:6543/ to see the site running locally.
 ##### Test coverage
 
 To run the tests, check your test coverage:
-** $ nosetests
+
+* $ nosetests
+
