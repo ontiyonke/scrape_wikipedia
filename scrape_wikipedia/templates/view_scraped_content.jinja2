@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="bottom">
+    {% if contents_table %}
+        <h2>Scraped Wikipedia Contents table</h2>
+        {{ contents_table|safe }}
+    {% else %}
+        <p>The scraped <b>Wikipedia</b> page has no table of contents.</p><br>
+    {%  endif %}
+    <div id="left" class="align-right">
+        Click <a href="/">here</a> to scrape the table of contents from a Wikipedia page.
+    </div>
+</div>
+{% endblock %}

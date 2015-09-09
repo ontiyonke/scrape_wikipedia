@@ -1,0 +1,31 @@
+import logging
+from bs4 import BeautifulSoup
+import requests
+
+from scrape_wikipedia.forms import UrlForm
+
+from pyramid.view import view_config
+from pyramid.httpexceptions import HTTPFound
+
+logger = logging.getLogger('scrape_wikipedia')
+
+@view_config(route_name='home', renderer='home.jinja2')
+def home(request):
+    return {'project': 'Scrape Wikipedia'}
+
+@view_config(name='wiki', renderer='wiki.jinja2')
+def wiki(request):
+    form = UrlForm(request.POST)
+    if request.method == 'POST' and form.validate():
+        url = form.url.data
+        request.session['scrape_url'] = url
+        return HTTPFound(location=request.relative_url('scraped-wikipedia-content-table'))
+    return {'form': form}
+
+
+@view_config(name='scraped-wikipedia-content-table', renderer='scraped_wikipedia_content_table.jinja2')
+def scraped_wikipedia_content_table(request):
+    response = requests.get(request.session.get('scrape_url'))
+    soup = BeautifulSoup(response.text)
+    contents_table = soup.find("div", {"id": "toc"})
+    return {'contents_table': contents_table}

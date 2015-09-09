@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="bottom">
+    <h2>Scrape Wikipedia Content table</h2>
+    <form name="contact-form" accept-charset="utf-8" method="POST">
+        {% if form.errors %}
+            <ul class="errors">
+                {% for error in form.url.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <p>
+            {{form.url.label}}
+        </p>
+        <p>
+            {{form.url()}}
+        </p>
+
+        <div id="left" class="align-right">
+            <input type="submit" name="submit" id="submit" value="Submit">
+        </div>
+    </form>
+</div>
+{% endblock %}
