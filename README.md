@@ -4,12 +4,12 @@ Project forked from [Alvaro Aguirre] (https://github.com/aaguirre/FrameWars.Cont
 
 Simple application to scrape the table of contents from a Wikipedia page:
 
-* 1. The homepage shows a welcome message and present the user with an input box that asks for a Wikipedia URL
-    and a submit button.
-* 2. When the submit button is clicked, the application downloads the HTML source code for the given page and scrapes
-    the table of contents for the given page.
-* 3. The table of contents is posted back to the user in a new page in html format.
-* 4. The showing the table of contents provides a reset button that will allow the user to restart the process.
+* The homepage shows a welcome message and present the user with an input box that asks for a Wikipedia URL
+  and a submit button.
+* When the submit button is clicked, the application downloads the HTML source code for the given page and scrapes
+  the table of contents for the given page.
+* The table of contents is posted back to the user in a new page in html format.
+* The showing the table of contents provides a reset button that will allow the user to restart the process.
 
 ### Settings
 ------------
