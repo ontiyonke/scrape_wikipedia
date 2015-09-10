@@ -7,6 +7,7 @@ README = open(os.path.join(here, 'README.md')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.md')).read()
 
 requires = [
+    'paste',
     'pyramid>=1.0.2',
     'pyramid_jinja2==2.5',
     'pyramid_debugtoolbar==2.4.1',
