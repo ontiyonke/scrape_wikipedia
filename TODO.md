@@ -1,11 +1,9 @@
 ## Future changes
-1. Views:
++ Views:
+	- Use class views and Mixin to encapsulate common functionality.
 
-* Use class views and Mixin to encapsulate common functionality.
++ Tests:
+	- Tests for the form submit.
+	- Convert all tests to use WebTest and tox
 
-2. Tests:
-
-* Tests for the form submit.
-* Convert all tests to use WebTest and tox
-
-3. Clean up the templates and styling.
++ Clean up the templates and styling.
