@@ -52,6 +52,6 @@ setup(
         "Framework :: Pylons",
         "Topic :: Web scrape",
         "Topic :: Internet :: WWW/HTTP",
-        "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
+        "Topic :: Internet :: WWW/HTTP :: WSGI :: Application"
     ],
 )
